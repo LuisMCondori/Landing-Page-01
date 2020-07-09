@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0 20px;/*Espacio a los costados 20px - arriba y abajo 0px*/
+    color: #373f51;/*Color de las letras*/
+    font-family: tahoma;/*Tipo de letra*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:    "header"
+                            "contenido";
+}
+
+/*----- ----- ----- HEADER ----- ----- -----*/
+header{
+    grid-area: header;
+    width: 90%;/*Ocupa el 90% del viewport*/
+    margin: auto;/*para ponerlo en el centro*/
+    padding: 30px 0;/*30px arriba y abajo - 0px a los costados*/
+    display: flex;
+    justify-content: space-between;
+ 
+}
+/*----- ----- ----- TITULO DE PAGINA ----- ----- -----*/
+header .title-page{
+    justify-self: left;/*Acomodarlo a la izquierda*/
+}
+/*----- ----- ----- MENU ----- ----- -----*/
+header .main-nav a{
+    color: #999;/*Color de letra*/
+    font-size: bold;/*Tamaño de letra*/
+    text-decoration: none;/*Para que no tenga subrayado*/
+    font-family: tahoma;/*Tipo de letra*/
+    cursor: pointer;/*El cursor cambie a puntero cuano pase*/  
+    margin-left: 10px;/*Cada "a" tiene 10px a la izquierda*/
+    transition: 0.3s ease;
+    font-family: tahoma;
+}
+header .main-nav a:hover{
+    color: #373f51;
+}
+/*----- ----- ----- SOCIAL ----- ----- -----*/
+header .social{
+    justify-self: right;/*Acomodarlo a la derecha*/
+}
+header .social i{
+    font-size: 18px;/*Tamaño de letra*/
+    margin-left: 10px;/*Margen de 10px a la derecha*/
+}
+header .social i:first-of-type{
+    color: #dfc2f2;
+}
+header .social i:nth-child(2){
+    color: #dfc2f2;
+}
+header .social i:nth-child(3){
+    color: #cfb3cd;
+}
+/*----- ----- ----- HEADER ----- ----- -----*/
+
+/*----- ----- ----- MAIN ----- ----- -----*/
+.contenido{
+    grid-area: contenido;
+}
+.item-box{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+.item-box div{
+    width: 50%;
+    display: inline-block;
+    flex: 1 1 50%;
+}
+/*Titulo*/
+.item-box div h2{
+    color: #373f51;
+    font-size: 4vw;
+    margin-bottom: 30px;
+    font-family: tahoma;
+    text-transform: uppercase;
+}
+/*Parrafo*/
+.item-box div p{
+    font-size: 1.3vw;
+}
+.item-box .left{
+    color: #333;
+    width: auto;
+    padding: 10%;
+    height: auto;
+}
+.item-box .right img{
+    width: 100%;
+    height: 100%;
+}
+
+.item-box .third span{
+    font-size: 60px;
+    color: #d8dbe2;
+}
+
+.item-box .third span sub{
+    font-size: 30px;
+}
+
+.item-box .third h2{
+    font-size: 20px;
+}
+
+.item-box .third button{
+    color: #333;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 30px;
+    font-weight: bold;
+    background: transparent;
+}
+
+.item-box .third button::after{
+    content: '\f178';
+    font-family: fontawesome;
+    transform: translateX(7px);
+    display: inline-block;
+    transition: all 0.3s ease-out;
+}
+
+.item-box .fifth input,
+.item-box .fifth textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px 0;
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #d8dbe2;
+}
+
+.item-box .fifth textarea{
+    resize: none;
+    height: 10em;
+}
